@@ -1,3 +1,4 @@
+![Estado del repositorio](https://img.shields.io/badge/estado-activo-brightgreen)
 # 🖥️ TRAE IDE en VirtualBox para Pop!_OS
 
 <p align="center">
