@@ -1,0 +1,17 @@
+# VirtualBox files
+*.vbox
+*.vbox-prev
+*.vdi
+*.vmdk
+*.iso
+*.ova
+*.ovf
+VirtualBox VMs/
+
+# Temporary files
+*.tmp
+*.log
+*~
+
+# VS Code
+.vscode/
