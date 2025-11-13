@@ -112,8 +112,7 @@ create_vm() {
     log "Creando máquina virtual '$VM_NAME'..."
     
     # Crear VM
-    VBoxManage createvm --name "$VM_NAME" --ostype "Windows11_64" --register
-    
+    VBoxManage createvm --name "$VM_NAME" --ostype "Windows10_64" --register    
     # Configurar memoria y CPU
     TOTAL_CPUS=$(nproc)
     ALLOC_CPUS=$((TOTAL_CPUS < 8 ? $TOTAL_CPUS/2 : 4))
@@ -129,7 +128,7 @@ create_vm() {
     
     # Configurar sistema
     VBoxManage modifyvm "$VM_NAME" \
-        --firmware efi \
+        --firmware bios \  # Windows 10 funciona mejor con BIOS en VMs
         --biossystemtimeoffset 0 \
         --bioslogofadein off \
         --bioslogofadeout off \
